@@ -9,16 +9,43 @@ const Home = () => {
   // console.log(isOpen);
 
   let [isOpen, setIsOpen] = useState(false);
+  let [clickedIndex, setClickedIndex] = useState(null);
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  function openModal() {
+  function openModal(e) {
+    e.preventDefault();
+    setClickedIndex(Number(e.target.id));
     setIsOpen(true);
   }
 
   console.log("isopen", isOpen);
+  console.log("clicked", clickedIndex);
+
+  const projects = [
+    {
+      iconSrc: "/assets/cart.svg",
+      alt: "cart icon",
+      title: "Ecommerce | Turmii",
+    },
+    {
+      iconSrc: "/assets/ERP.svg",
+      alt: "erp icon",
+      title: "ERP | Tekron",
+    },
+    {
+      iconSrc: "/assets/inventory.svg",
+      alt: "inventory icon",
+      title: "Inventory | Suk",
+    },
+    {
+      iconSrc: "/assets/business.svg",
+      alt: "business icon",
+      title: "Business | Akiya Coffee",
+    },
+  ];
 
   return (
     <div>
@@ -43,6 +70,7 @@ const Home = () => {
                 src="/assets/me.JPG"
                 layout="fill"
                 objectFit="cover"
+                priority={true}
               ></Image>
             </div>
             <p className="text-xl">Mikiyas Girma</p>
@@ -61,35 +89,20 @@ const Home = () => {
               Projects
             </div>
 
-            <div className="flex space-x-6 pt-4">
-              <img src="/assets/cart.svg" />
-              <button
-                // ref={inputRef}
-                onClick={openModal}
-                className="bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white"
-              >
-                <p className=" font-semibold">Ecommerce | Turmii</p>
-              </button>
-            </div>
-            <div className="flex space-x-6 pt-4">
-              <img src="/assets/ERP.svg" />
-              <div className="bg-white rounded-md px-4 py-1">
-                <p className="text-black font-semibold">ERP | Tekron</p>
-              </div>
-            </div>
-            <div className="flex space-x-6 pt-4">
-              <img src="/assets/inventory.svg" />
-              <div className="bg-white rounded-md px-4 py-1">
-                <p className="text-black font-semibold">Inventory | Suk</p>
-              </div>
-            </div>
-            <div className="flex space-x-6 pt-4">
-              <img src="/assets/business.svg" />
-              <div className="bg-white rounded-md px-4 py-1">
-                <p className="text-black font-semibold">
-                  Business | Akiya Coffee
-                </p>
-              </div>
+            <div className="flex flex-col space-y-4">
+              {projects.map((project, index) => (
+                <button
+                  id={index}
+                  onClick={(e) => openModal(e)}
+                  className="flex space-x-6 pt-4"
+                  key={index}
+                >
+                  <img src={project.iconSrc} />
+                  <div className="bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
+                    <p className=" font-semibold">{project.title}</p>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
