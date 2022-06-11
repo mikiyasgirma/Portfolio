@@ -1,5 +1,46 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// Import Swiper React components
+// Import Swiper styles
+import "swiper/css/navigation";
+
+// import "./styles.css";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
+
+const portfolioImage = [
+  {
+    src: "/assets/dashboard-1.jpg",
+    alt: "Dashboard",
+  },
+  {
+    src: "/assets/dashboard-2.jpg",
+    alt: "Dashboard",
+  },
+  {
+    src: "/assets/dashboard-3.jpg",
+    alt: "Dashboard",
+  },
+  {
+    src: "/assets/dashboard-1.jpg",
+    alt: "Dashboard",
+  },
+  {
+    src: "/assets/dashboard-2.jpg",
+    alt: "Dashboard",
+  },
+  {
+    src: "/assets/dashboard-3.jpg",
+    alt: "Dashboard",
+  },
+];
 
 const MyModal = ({ isOpen, closeModal }) => {
   return (
@@ -44,16 +85,42 @@ const MyModal = ({ isOpen, closeModal }) => {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Payment successful
+                    Project Detail
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
+                  <div className="w-full h-60 ">
+                    <Swiper
+                      slidesPerView={4}
+                      spaceBetween={0}
+                      slidesPerGroup={3}
+                      loop={true}
+                      loopFillGroupWithBlank={true}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Pagination, Navigation]}
+                      className="mySwiper"
+                      style={{
+                        "--swiper-navigation-color": "#0F3876",
+                        "--swiper-navigation-color": "#0F3876",
+                      }}
+                    >
+                      {portfolioImage.map((image, index) => (
+                        <SwiperSlide key={index}>
+                          {" "}
+                          <Image
+                            className="rounded-md"
+                            src={image.src}
+                            alt={image.alt}
+                            width="180px"
+                            height="180px"
+                          />{" "}
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                   </div>
 
-                  <div className="mt-4">
+                  <div className="fixed bottom-4 left-6">
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
