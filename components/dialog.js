@@ -90,7 +90,7 @@ const MyModal = ({ isOpen, closeModal }) => {
                   <div className="w-full h-60 ">
                     <Swiper
                       slidesPerView={4}
-                      spaceBetween={0}
+                      spaceBetween={15}
                       slidesPerGroup={3}
                       loop={true}
                       loopFillGroupWithBlank={true}
