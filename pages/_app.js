@@ -5,7 +5,7 @@ import WindowWidthContextProvider from "./../contexts/WindowWidthContextProvider
 function MyApp({ Component, pageProps }) {
   return (
     <WindowWidthContextProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </WindowWidthContextProvider>
   );
 }

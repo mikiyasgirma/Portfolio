@@ -49,14 +49,14 @@ const Home = () => {
 
   return (
     <div>
-      <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
+      <div className="md:h-screen h-screen md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-12">
           <div
             className="bg-white flex flex-col justify-center px-6 py-4 text-gray-400 w-full md:w-80 h-52 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
             style={{ backdropFilter: "blur(5px)" }}
           >
             <p className="uppercase md:text-2xl text-xl">
-              This is my world, let's enjoy it together. Rentless Effort.
+              This is my world, let's enjoy it together. Rlentless Effort.
             </p>
             <div className="fixed bottom-4 left-6">
               mikiyasgirma43@gmail.com
