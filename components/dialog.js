@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState, useRef } from "react";
+import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { useWindowWidth } from "./../contexts/WindowWidthContextProvider";
@@ -10,52 +10,16 @@ import "swiper/css/navigation";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
-const portfolioImage = [
-  {
-    src: "/assets/dashboard-1.jpg",
-    alt: "Dashboard",
-  },
-  {
-    src: "/assets/dashboard-2.jpg",
-    alt: "Dashboard",
-  },
-  {
-    src: "/assets/dashboard-3.jpg",
-    alt: "Dashboard",
-  },
-  {
-    src: "/assets/dashboard-1.jpg",
-    alt: "Dashboard",
-  },
-  {
-    src: "/assets/dashboard-2.jpg",
-    alt: "Dashboard",
-  },
-  {
-    src: "/assets/dashboard-3.jpg",
-    alt: "Dashboard",
-  },
-];
-
-const MyModal = ({ isOpen, closeModal }) => {
+const MyModal = ({ isOpen, closeModal, projectsData }) => {
   const windowWidth = useWindowWidth();
   const mediumBreakpoint = 640;
   const isLaptop = windowWidth >= mediumBreakpoint;
 
-  console.log("isLaptop", isLaptop, "windowWidth", windowWidth);
+  // console.log("projectsData", projectsData);
+  // console.log("isLaptop", isLaptop, "windowWidth", windowWidth);
 
   return (
     <>
-      {/* <div className="fixed inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-        >
-          Open dialog
-        </button>
-      </div> */}
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -83,12 +47,6 @@ const MyModal = ({ isOpen, closeModal }) => {
               >
                 <Dialog.Panel className="w-full h-full fixed md:static bottom-0 top-12 md:w-2/3 transform overflow-hidden rounded-2xl bg-white px-6 text-left align-middle shadow-xl transition-all">
                   <div className="flex flex-col space-y-2">
-                    {/* <Dialog.Title
-                      as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
-                    >
-                      Project Detail
-                    </Dialog.Title> */}
                     <div className="w-full h-60 ">
                       <Swiper
                         slidesPerView={isLaptop ? 4 : 2}
@@ -107,7 +65,7 @@ const MyModal = ({ isOpen, closeModal }) => {
                           "--swiper-navigation-color": "#0F3876",
                         }}
                       >
-                        {portfolioImage.map((image, index) => (
+                        {projectsData?.images.map((image, index) => (
                           <SwiperSlide key={index}>
                             {" "}
                             <Image
@@ -138,13 +96,9 @@ const MyModal = ({ isOpen, closeModal }) => {
                           Features
                         </div>
                         <ul className="text-sm leading-5 font-medium text-gray-700">
-                          <li>Product Catalog</li>
-                          <li>Product Detail</li>
-                          <li>Checkout</li>
-                          <li>Order Management</li>
-                          <li>Product Reviews</li>
-                          <li>Product Ratings</li>
-                          <li>Report Management</li>
+                          {projectsData?.features.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                          ))}
                         </ul>
                       </div>
                       <div className="h-52 w-[1px] bg-[#0F3876] bg-opacity-20"></div>
@@ -154,7 +108,7 @@ const MyModal = ({ isOpen, closeModal }) => {
                             Role
                           </p>
                           <p className="text-sm leading-5 font-medium text-gray-700">
-                            Full Stack Developer
+                            {projectsData?.role}
                           </p>
                         </div>
                         <div>
@@ -162,7 +116,7 @@ const MyModal = ({ isOpen, closeModal }) => {
                             Technologies
                           </p>
                           <p className="text-sm leading-5 font-medium text-gray-700">
-                            React, Node, Express, MongoDB, Mongoose,
+                            {projectsData?.techstack}
                           </p>
                         </div>
                         <div>
@@ -170,8 +124,9 @@ const MyModal = ({ isOpen, closeModal }) => {
                             Links
                           </p>
                           <div className="flex space-x-4">
-                            <img src="/assets/github-black.svg" />
-                            <img src="/assets/browser.svg" />
+                            {projectsData?.links.map((link, index) => (
+                              <img src={link.src} alt={link.alt} key={index} />
+                            ))}
                           </div>
                         </div>
                       </div>

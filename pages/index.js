@@ -3,26 +3,25 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import MyModal from "../components/dialog";
+import projectsData from "../data/projects";
 
 const Home = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-  // console.log(isOpen);
-
   let [isOpen, setIsOpen] = useState(false);
   let [clickedIndex, setClickedIndex] = useState(null);
+  let [clickedProject, setClickedProject] = useState(null);
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  function openModal(e) {
-    e.preventDefault();
-    setClickedIndex(Number(e.target.id));
+  function openModal(index) {
+    setClickedIndex(index);
+    setClickedProject(projectsData[index]);
     setIsOpen(true);
   }
 
-  console.log("isopen", isOpen);
-  console.log("clicked", clickedIndex);
+  // console.log("clicked index", clickedIndex);
+  // console.log("clicked project", clickedProject);
 
   const projects = [
     {
@@ -49,7 +48,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="md:h-screen h-screen md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
+      <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-12">
           <div
             className="bg-white flex flex-col justify-center px-6 py-4 text-gray-400 w-full md:w-80 h-52 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
@@ -93,7 +92,7 @@ const Home = () => {
               {projects.map((project, index) => (
                 <button
                   id={index}
-                  onClick={(e) => openModal(e)}
+                  onClick={() => openModal(index)}
                   className="flex space-x-6 pt-4"
                   key={index}
                 >
@@ -106,7 +105,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {<MyModal isOpen={isOpen} closeModal={closeModal} />}
+        {
+          <MyModal
+            isOpen={isOpen}
+            closeModal={closeModal}
+            projectsData={clickedProject}
+          />
+        }
       </div>
     </div>
   );
