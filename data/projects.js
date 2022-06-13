@@ -1,5 +1,10 @@
 const projects = [
   {
+    title: "Ecommece | Turmii",
+    icon: {
+      src: "/assets/cart.svg",
+      alt: "cart icon",
+    },
     images: [
       {
         src: "/assets/dashboard-1.jpg",
@@ -49,6 +54,11 @@ const projects = [
     ],
   },
   {
+    title: "ERP Tekron",
+    icon: {
+      src: "/assets/ERP.svg",
+      alt: "erp icon",
+    },
     images: [
       {
         src: "/assets/dashboard-2.jpg",
@@ -94,6 +104,11 @@ const projects = [
     ],
   },
   {
+    title: "Inventory | Suk",
+    icon: {
+      src: "/assets/inventory.svg",
+      alt: "inventory icon",
+    },
     images: [
       {
         src: "/assets/dashboard-3.jpg",
@@ -140,6 +155,11 @@ const projects = [
     ],
   },
   {
+    title: "Business | Akiya Coffee",
+    icon: {
+      src: "/assets/business.svg",
+      alt: "business icon",
+    },
     images: [
       {
         src: "/assets/dashboard-2.jpg",

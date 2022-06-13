@@ -20,32 +20,6 @@ const Home = () => {
     setIsOpen(true);
   }
 
-  // console.log("clicked index", clickedIndex);
-  // console.log("clicked project", clickedProject);
-
-  const projects = [
-    {
-      iconSrc: "/assets/cart.svg",
-      alt: "cart icon",
-      title: "Ecommerce | Turmii",
-    },
-    {
-      iconSrc: "/assets/ERP.svg",
-      alt: "erp icon",
-      title: "ERP | Tekron",
-    },
-    {
-      iconSrc: "/assets/inventory.svg",
-      alt: "inventory icon",
-      title: "Inventory | Suk",
-    },
-    {
-      iconSrc: "/assets/business.svg",
-      alt: "business icon",
-      title: "Business | Akiya Coffee",
-    },
-  ];
-
   return (
     <div>
       <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
@@ -89,14 +63,14 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col space-y-4">
-              {projects.map((project, index) => (
+              {projectsData.map((project, index) => (
                 <button
                   id={index}
                   onClick={() => openModal(index)}
                   className="flex space-x-6 pt-4"
                   key={index}
                 >
-                  <img src={project.iconSrc} />
+                  <img src={project.icon.src} />
                   <div className="bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
                     <p className=" font-semibold">{project.title}</p>
                   </div>
