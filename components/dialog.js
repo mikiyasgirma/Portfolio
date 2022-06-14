@@ -80,10 +80,10 @@ const MyModal = ({ isOpen, closeModal, projectsData }) => {
                       </Swiper>
                     </div>
 
-                    <div className="fixed md:bottom-4 left-6">
+                    <div className="absolute bottom-16 md:bottom-4 right-6">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-[#00b202] px-4 py-2 text-sm font-medium text-white hover:bg-green-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                         onClick={closeModal}
                       >
                         Got it, thanks!

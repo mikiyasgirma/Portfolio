@@ -65,6 +65,15 @@ body {
   background-position: center;
 }
 
+.swiper-pagination > .swiper-pagination-bullet {
+  opacity: 1;
+  border: white solid 1px;
+  background-color: #dddddd;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+  background-color: #00b202;
+}
+
 .swiper-button-next::after {
   display: none;
 }
