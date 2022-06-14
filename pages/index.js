@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import MyModal from "../components/dialog";
+import MyModal from "../components/Dialog";
 import projectsData from "../data/projects";
 import SocialLinks from "../components/SocialLinks";
 

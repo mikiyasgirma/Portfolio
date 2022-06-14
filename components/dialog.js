@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { useWindowWidth } from "./../contexts/WindowWidthContextProvider";
+import { useWindowWidth } from "../contexts/WindowWidthContextProvider";
 
 import "swiper/css";
 import "swiper/css/pagination";
