@@ -22,7 +22,10 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-12">
           <div
@@ -81,8 +84,19 @@ const Home = () => {
             projectsData={clickedProject}
           />
         }
+        <div class="overflow-x-hidden">
+          <div class="py-12 animate-marquee text-[#00b202] whitespace-nowrap ">
+            <span class="text-xl mx-12">Tailwind CSS</span>
+            <span class="text-xl mx-12">React Js</span>
+            <span class="text-xl mx-12">Next Js</span>
+            <span class="text-xl mx-12">Node Js</span>
+            <span class="text-xl mx-12">Typescript</span>
+            <span class="text-xl mx-12">MySql</span>
+            <span class="text-xl mx-12">MongoDB</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
