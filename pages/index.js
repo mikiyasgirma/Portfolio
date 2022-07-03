@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import MyModal from "../components/MyModal";
 import projectsData from "../data/projects";
-import SocialLinks from "../components/SocialLinks";
+
+import Link from "next/link";
 
 const Home = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,22 @@ const Home = () => {
       <Head>
         <title>Home</title>
       </Head>
+
       <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
+        <nav>
+          <ul className="flex space-x-4 items-center justify-center uppercase font-semibold">
+            <Link href="index">
+              <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
+                Home
+              </li>
+            </Link>
+            <Link href="/me">
+              <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
+                Me
+              </li>
+            </Link>
+          </ul>
+        </nav>
         <div className="flex flex-col md:flex-row justify-between items-center space-y-12">
           <div
             className="bg-white flex flex-col justify-center px-6 py-4 text-gray-400 w-full md:w-80 h-52 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
@@ -40,21 +56,18 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col items-center space-y-6">
-            <div className="w-36 h-36 relative">
-              <Image
-                alt="mikiyasgirma"
-                className="rounded-full"
-                src="/assets/me.JPG"
-                layout="fill"
-                objectFit="cover"
-                priority={true}
-              ></Image>
+            <div className="w-40 h-40 relative">
+              <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads02&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Wink&eyebrowType=Default&mouthType=Smile&skinColor=Light" />
             </div>
             <p className="text-xl">Mikiyas Girma</p>
-            <p className="max-w-xs ">
-              Software Engineer | Web Developer | Full Stack | Intermediate
-            </p>
-            <SocialLinks />
+            <p className="max-w-xs ">Software Engineer | Fullstack</p>
+            <div className="flex space-x-6">
+              <img src="/assets/javascript.svg" className="w-10 h-10" />
+              <img src="/assets/typescript.svg" className="w-10 h-10" />
+              <img src="/assets/reactjs.svg" className="w-10 h-10" />
+              <img src="/assets/nextjs.svg" className="w-10 h-10" />
+              <img src="/assets/node.svg" className="w-10 h-10" />
+            </div>
           </div>
           <div className="flex flex-col text-sm md:text-base space-y-4 ">
             <div className="text-black font-semibold bg-white w-32 rounded-md px-4 py-1">
@@ -84,17 +97,6 @@ const Home = () => {
             projectsData={clickedProject}
           />
         }
-        <div class="overflow-x-hidden">
-          <div class="py-12 animate-marquee text-[#00b202] whitespace-nowrap ">
-            <span class="text-xl mx-12">Tailwind CSS</span>
-            <span class="text-xl mx-12">React Js</span>
-            <span class="text-xl mx-12">Next Js</span>
-            <span class="text-xl mx-12">Node Js</span>
-            <span class="text-xl mx-12">Typescript</span>
-            <span class="text-xl mx-12">MySql</span>
-            <span class="text-xl mx-12">MongoDB</span>
-          </div>
-        </div>
       </div>
     </>
   );
