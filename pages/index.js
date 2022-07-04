@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import MyModal from "../components/MyModal";
 import projectsData from "../data/projects";
+import Nav from "../components/Nav";
 
 import Link from "next/link";
 
@@ -28,22 +29,9 @@ const Home = () => {
         <title>Home</title>
       </Head>
 
-      <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
-        <nav>
-          <ul className="flex space-x-4 items-center justify-center uppercase font-semibold">
-            <Link href="index">
-              <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
-                Home
-              </li>
-            </Link>
-            <Link href="/me">
-              <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
-                Me
-              </li>
-            </Link>
-          </ul>
-        </nav>
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-12">
+      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-16 p-8">
+        <Nav />
+        <div className="flex flex-col h-full md:flex-row justify-between items-center space-y-12">
           <div
             className="bg-white flex flex-col justify-center px-6 py-4 text-gray-400 w-full md:w-80 h-52 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
             style={{ backdropFilter: "blur(5px)" }}

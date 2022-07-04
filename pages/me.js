@@ -1,25 +1,19 @@
 import Link from "next/link";
 import SocialLinks from "../components/SocialLinks";
+import Nav from "../components/Nav";
+import Head from "next/head";
 
 const me = () => {
   return (
-    <div className="md:h-screen h-full md:flex md:flex-col justify-center py-6 md:px-16 px-6 bg-vscode-background bg-repeat text-white font-Roboto tracking-wide">
-      <nav>
-        <ul className="flex space-x-4 items-center justify-center uppercase font-semibold">
-          <Link href="/">
-            <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
-              Home
-            </li>
-          </Link>
-          <Link href="/me">
-            <li className=" bg-white cursor-pointer text-black rounded-md px-4 py-1 hover:outline hover:bg-vscode-background hover:text-white">
-              Me
-            </li>
-          </Link>
-        </ul>
-        <div className="flex flex-col items-center justify-center h-full md:h-[450px] w-full bg-[#f5f5f5] mt-12 rounded-md text-gray-900 text-base px-12 text-center">
+    <>
+      <Head>
+        <title>Me</title>
+      </Head>
+      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-16 p-8">
+        <Nav />
+        <div className="flex flex-col items-center justify-center py-12 h-full w-full bg-[#f5f5f5] mt-12 rounded-md text-gray-900 text-base px-12 text-center">
           <p className=" font-semibold text-xl text-[#00b202]">Mikiyas Girma</p>
-          <p className="py-8">
+          <p className="py-12">
             I am a professional Software Engineer, who has served the industry
             for more than two and half years. I am a Fullstack
             engineer(FE-heavy) with great experience in web technologies.
@@ -36,8 +30,8 @@ const me = () => {
           </p>
           <SocialLinks />
         </div>
-      </nav>
-    </div>
+      </div>
+    </>
   );
 };
 export default me;
