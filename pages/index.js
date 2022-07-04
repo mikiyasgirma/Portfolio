@@ -38,7 +38,7 @@ const Home = () => {
               This is my world, let's enjoy it together. Relentless Effort.
             </p>
             <div className="absolute bottom-4 left-6">
-              mikiyasgirma43@gmail.com
+              mikiyasgirma.dev@gmail.com
             </div>
           </div>
           <div className="flex flex-col items-center space-y-6">
