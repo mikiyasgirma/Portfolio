@@ -52,7 +52,7 @@ const SocialLinks = () => {
           />
         </svg>
       </a>
-      <a href="mailto:mikiyasgirma43@gmail.com">
+      <a href="mailto:mikiyasgirma.dev@gmail.com">
         <svg
           width="26"
           height="24"
