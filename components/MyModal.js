@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
+import Link from "next/link";
 
 const MyModal = ({ isOpen, closeModal, projectsData }) => {
   const windowWidth = useWindowWidth();
@@ -86,47 +87,53 @@ const MyModal = ({ isOpen, closeModal, projectsData }) => {
                         className="inline-flex justify-center rounded-md border border-transparent bg-[#00b202] px-4 py-2 text-sm font-medium text-white hover:bg-green-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
                         onClick={closeModal}
                       >
-                        Got it, thanks!
+                        Got it
                       </button>
                     </div>
                     <div className="w-ful h-[0.1px] bg-[#0F3876] bg-opacity-20"></div>
                     <div className="flex justify-between pt-2 space-x-12">
-                      <div>
+                      <div className="">
                         <div className="text-lg font-semibold leading-6 text-gray-900 pb-4">
                           Features
                         </div>
-                        <ul className="text-sm leading-5 font-medium text-gray-700">
+                        <ul className="text-xs max-h-40 overflow-auto leading-5 font-medium text-gray-700">
                           {projectsData?.features.map((feature, index) => (
                             <li key={index}>{feature}</li>
                           ))}
                         </ul>
                       </div>
                       <div className="h-52 w-[1px] bg-[#0F3876] bg-opacity-20"></div>
-                      <div className="flex flex-col space-y-4">
+                      <div className="flex flex-col space-y-4 pr-12">
                         <div>
-                          <p className="text-lg  leading-6 text-gray-900 pb-2 font-semibold">
+                          <p className="text-sm  leading-6 text-gray-900 pb-2 font-semibold">
                             Role
                           </p>
-                          <p className="text-sm leading-5 font-medium text-gray-700">
+                          <p className="text-xs leading-5 font-medium text-gray-700">
                             {projectsData?.role}
                           </p>
                         </div>
                         <div>
-                          <p className="text-lg  leading-6 text-gray-900 pb-2 font-semibold">
+                          <p className="text-sm  leading-6 text-gray-900 pb-2 font-semibold">
                             Technologies
                           </p>
-                          <p className="text-sm leading-5 font-medium text-gray-700">
+                          <p className="text-xs leading-5 font-medium text-gray-700">
                             {projectsData?.techstack}
                           </p>
                         </div>
                         <div>
-                          <p className="text-lg  leading-6 text-gray-900 pb-2 font-semibold">
+                          <p className="text-sm  leading-6 text-gray-900 pb-2 font-semibold">
                             Links
                           </p>
-                          <div className="flex space-x-4">
-                            {projectsData?.links.map((link, index) => (
-                              <img src={link.src} alt={link.alt} key={index} />
-                            ))}
+                          <div className="flex space-x-2">
+                            <div className="flex space-x-4 items-center">
+                              {projectsData?.links.map((link, index) => (
+                                <Link href={link.href} key={index}>
+                                  <a>
+                                    <img src={link.src} alt={link.alt} />
+                                  </a>
+                                </Link>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>

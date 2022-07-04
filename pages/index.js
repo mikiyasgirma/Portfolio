@@ -6,8 +6,6 @@ import MyModal from "../components/MyModal";
 import projectsData from "../data/projects";
 import Nav from "../components/Nav";
 
-import Link from "next/link";
-
 const Home = () => {
   let [isOpen, setIsOpen] = useState(false);
   let [clickedIndex, setClickedIndex] = useState(null);
@@ -29,7 +27,7 @@ const Home = () => {
         <title>Home</title>
       </Head>
 
-      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-16 p-8">
+      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-20 p-8">
         <Nav />
         <div className="flex flex-col h-full md:flex-row justify-between items-center space-y-12">
           <div
