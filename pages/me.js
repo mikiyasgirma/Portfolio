@@ -9,7 +9,7 @@ const me = () => {
       <Head>
         <title>Me</title>
       </Head>
-      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-16 p-8">
+      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-20 p-8">
         <Nav />
         <div className="flex flex-col items-center justify-center py-12 h-full w-full bg-[#f5f5f5] mt-12 rounded-md text-gray-900 text-base px-12 text-center">
           <p className=" font-semibold text-xl text-[#00b202]">Mikiyas Girma</p>
