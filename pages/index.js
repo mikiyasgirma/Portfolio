@@ -43,7 +43,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col items-center space-y-6">
             <div className="w-40 h-40 relative">
-              <img src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads02&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Wink&eyebrowType=Default&mouthType=Smile&skinColor=Light" />
+              <img src="/assets/my_avatar.png" />
             </div>
             <p className="text-xl">Mikiyas Girma</p>
             <p className="max-w-xs ">Software Engineer | Fullstack</p>
