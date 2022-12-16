@@ -187,50 +187,50 @@ const projects = [
       },
     ],
   },
-  {
-    title: "Business | Akiya Coffee",
-    icon: {
-      src: "/assets/business.svg",
-      alt: "business icon",
-    },
-    images: [
-      {
-        src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977093/portfolio/akiya/Screenshot_216_whlxcb.png",
-        alt: "Dashboard",
-      },
-      {
-        src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977098/portfolio/akiya/Screenshot_219_vqwkxx.png",
-        alt: "Dashboard",
-      },
-      {
-        src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977099/portfolio/akiya/Screenshot_218_kthvn3.png",
-        alt: "Dashboard",
-      },
-      {
-        src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977102/portfolio/akiya/Screenshot_217_mnldv1.png",
-        alt: "Dashboard",
-      },
-      {
-        src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977107/portfolio/akiya/Screenshot_215_lcdlrx.png",
-        alt: "Dashboard",
-      },
-    ],
-    features: ["Simple and basic static small business website"],
-    role: "web developer",
-    techstack: "NextJs, Tailwind CSS",
-    links: [
-      {
-        href: "https://github.com/mikiyasgirma/Akiya-Coffee",
-        src: "/assets/github-black.svg",
-        alt: "Github",
-      },
-      {
-        href: "https://akiyacoffee.com/",
-        src: "/assets/browser.svg",
-        alt: "Website",
-      },
-    ],
-  },
+  // {
+  //   title: "Business | Akiya Coffee",
+  //   icon: {
+  //     src: "/assets/business.svg",
+  //     alt: "business icon",
+  //   },
+  //   images: [
+  //     {
+  //       src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977093/portfolio/akiya/Screenshot_216_whlxcb.png",
+  //       alt: "Dashboard",
+  //     },
+  //     {
+  //       src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977098/portfolio/akiya/Screenshot_219_vqwkxx.png",
+  //       alt: "Dashboard",
+  //     },
+  //     {
+  //       src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977099/portfolio/akiya/Screenshot_218_kthvn3.png",
+  //       alt: "Dashboard",
+  //     },
+  //     {
+  //       src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977102/portfolio/akiya/Screenshot_217_mnldv1.png",
+  //       alt: "Dashboard",
+  //     },
+  //     {
+  //       src: "https://res.cloudinary.com/dqkpqzldv/image/upload/v1656977107/portfolio/akiya/Screenshot_215_lcdlrx.png",
+  //       alt: "Dashboard",
+  //     },
+  //   ],
+  //   features: ["Simple and basic static small business website"],
+  //   role: "web developer",
+  //   techstack: "NextJs, Tailwind CSS",
+  //   links: [
+  //     {
+  //       href: "https://github.com/mikiyasgirma/Akiya-Coffee",
+  //       src: "/assets/github-black.svg",
+  //       alt: "Github",
+  //     },
+  //     {
+  //       href: "https://akiyacoffee.com/",
+  //       src: "/assets/browser.svg",
+  //       alt: "Website",
+  //     },
+  //   ],
+  // },
   {
     title: "Business | Kazma Accounting",
     icon: {

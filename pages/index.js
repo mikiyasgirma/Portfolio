@@ -29,12 +29,12 @@ const Home = () => {
 
       <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-20 p-8">
         <Nav />
-        <div className="flex flex-col h-full md:flex-row justify-between items-center space-y-12">
+        <div className="flex flex-col h-full my-12 md:my-0 md:flex-row justify-between items-center space-y-12">
           <div
-            className="bg-white flex flex-col justify-center px-6 py-4 text-gray-400 w-full md:w-80 h-52 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
+            className="bg-white flex flex-col justify-center px-6 md:py-4 py-2 text-gray-400 w-full md:w-80 h-40 md:h-64 shadow-2xl bg-clip-padding bg-opacity-30 rounded-md "
             style={{ backdropFilter: "blur(5px)" }}
           >
-            <p className="uppercase md:text-2xl text-xl relative">
+            <p className="uppercase md:text-2xl text-base relative">
               This is my world, let's enjoy it together. Relentless Effort.
             </p>
             <div className="absolute bottom-4 left-6">
