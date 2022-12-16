@@ -26,7 +26,7 @@ const me = () => {
             to bring to the world. It’s been a while since I started this
             journey. My energy and passion-driven approach might be a huge asset
             to your project or company. Let’s connect, let’s work together. By
-            the way, Arsenal is best😉.
+            the way, Arsenal is the best😉.
           </p>
           <SocialLinks />
         </div>
