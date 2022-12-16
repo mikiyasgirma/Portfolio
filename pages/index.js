@@ -27,7 +27,7 @@ const Home = () => {
         <title>Home</title>
       </Head>
 
-      <div className="min-h-screen w-full bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-20 p-8">
+      <div className="min-h-screen w-full flex flex-col justify-center bg-vscode-background bg-repeat font-Roboto text-white tracking-wide md:p-20 p-8">
         <Nav />
         <div className="flex flex-col h-full my-12 md:my-0 md:flex-row justify-between items-center space-y-12">
           <div
